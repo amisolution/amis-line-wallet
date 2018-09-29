@@ -10,11 +10,11 @@
 &nbsp;[![ßtesting TokenStore](https://img.shields.io/badge/ßtesting-TokenStore-yellow.svg)](https://token.store/trade/0x949bed886c739f1a3273629b3320db0c5024c719)
 &nbsp;[![αtesting EthenMarket](https://img.shields.io/badge/αtesting-ethenmarket-lightgrey.svg)](https://ethen.market/949bed886c739f1a3273629b3320db0c5024c719)&nbsp;[![ßtesting AmisDex](https://img.shields.io/badge/ßtesting-amisdex-lightblue.svg)](https://amisdex.github.io/amis-exchange-www)
 
-What is Amis LineEtherBot?
+What is Amis Line Wallet?
 
 
-# Amis LineEtherBot
- Amis LineEtherBot is a simple Mobile Dapp which uses Line Messaging API. You can inquire the balance, issue invoices and make payment with AMIS ERC20 Token and ETH.
+# Amis Line Wallet
+ Amis Line Wallet is a simple Mobile Dapp which uses Line Messaging API. You can inquire the balance, issue invoices and make payment with AMIS ERC20 Token and ETH.
  
  * source: https://pragma-curry.com/2018/07/07/221/
  * Works best with Metamask extension: install it metamask.io
@@ -26,23 +26,23 @@ What is Amis LineEtherBot?
  <img align="left" src="https://camo.qiitausercontent.com/d6ebaf6a8bae3b4555e50340ab233c122a3a86c1/68747470733a2f2f707261676d612d63757272792e636f6d2f77702f77702d636f6e74656e742f75706c6f6164732f323031382f30372f39363038636465383064333161656433623736656632623665363562653965642d312e6a7067" alt="HLD" width="100"/>
  
 # usage environment
-Ethereum Node - infura.io
-Application Server - Glitch
+* Ethereum Node - infura.io
+* Application Server - Glitch
 1/ Setting up the Line Messaging API
 Register providers and channels with LINE Developers' Start using Messaging API .
 
-For detailed procedures, refer to the last entry Entry Line Messaging API Flex Message .
+* For detailed procedures, refer to the last entry Entry Line Messaging API Flex Message .
 
 2/ Acquire the API KEY of infura.io
-By registering a mail address from the GET STARTED FOR FREE button of infura.io you can get API KEY.
+* By registering a mail address from the GET STARTED FOR FREE button of infura.io you can get API KEY.
 
-For detailed procedures, please refer to the last entry ERC 223 token shortly to public on the public chain (for busy people) .
+* For detailed procedures, please refer to the last entry ERC 223 token shortly to public on the public chain (for busy people) .
 
 3/ Set the Glitch
-Glitch is Paas that Node.js can use. Sign up can also be done with Github's account. 
-After logging in, create a new project from New Project.
+* Glitch is Paas that Node.js can use. Sign up can also be done with Github's account. 
+* After logging in, create a new project from New Project.
 
-I created a project named impartial-ellipse for that purpose. 
+* I created a project named impartial-ellipse for that purpose. 
 
 4/ Install the required modules
 Next step consist of adding all necessary modules, the following modules will be added
@@ -50,7 +50,7 @@ Next step consist of adding all necessary modules, the following modules will be
 * linebot - one of LineBotSDK
 * web3 - The Javascript API
 * nedb - NoSQL unnecessary for installation
-In order to add these 3 packages. Click package.json in the Glitch project folder and add it from Add Packages.
+Add these 3 packages by Clicking the package.json in the Glitch project folder and add it from Add Packages.
 
 5/ Define the class of LineBot
 In order to create Reply messages and read / write databases frequently in building LineBot applications, we make the series of processing systems into a class to make it easy to use. (To be exact, it is a pseudo class of ES5.) Reply There are many kinds of messages, but we define only text and buttons that are frequently used. Although it is a little long, it will be easier later if you put it together.
