@@ -329,7 +329,7 @@ var Main = function(app){
                     "https://pragma-curry.com/wp/wp-content/uploads/2018/07/Etherbot.png",
                     "Click the button below to show your account information.",
                     "Show",
-                    "https://etherbot.glitch.me/redirect/accountinfo"
+                    "https://impartial-ellipse.glitch.me/redirect/accountinfo"
                 );
                 break;
             case 'payment':
@@ -338,7 +338,7 @@ var Main = function(app){
                     "https://pragma-curry.com/wp/wp-content/uploads/2018/07/Etherbot.png",
                     "Click the button below to open URL.",
                     "Open URL",
-                    "https://etherbot.glitch.me/redirect/transfer"
+                    "https://impartial-ellipse.glitch.me/redirect/transfer"
                 );
                 break;
             case 'invoice':
@@ -347,7 +347,7 @@ var Main = function(app){
                     "https://pragma-curry.com/wp/wp-content/uploads/2018/07/Etherbot.png",
                     "Click the button below to open URL.",
                     "Open URL",
-                    "https://etherbot.glitch.me/redirect/invoice"
+                    "https://impartial-ellipse.glitch.me/redirect/invoice"
                 );
                 break;
             default:

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node server",
+    "start-new": "node ./bin/www",
     "build-js": "browserify public/src/app.js -o public/dist/app.js",
     "build-css": "node-sass --include-path scss public/scss/style.scss public/css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
