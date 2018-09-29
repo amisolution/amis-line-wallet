@@ -14,13 +14,35 @@ What is Amis LineEtherBot?
 
 
 # Amis LineEtherBot
- Amis LineEtherBot is a simple Mobile Dapp which uses Line Messaging API. You can inquire the balance, issue invoices and make payment with AMIS ERC20 Token and ETH.
+ Amis LineEtherBot is a simple Mobile Dapp which uses Line Messaging API. Using the Line Messaging API, you can get your AMIS / ETH's balance, issue remittance or transfer money from the Line talk screen. You can also check balance of your Service Provider, issue invoices and make payment with AMIS ERC20 Token and ETH.
  
  * source: https://pragma-curry.com/2018/07/07/221/
  * Works best with Metamask extension: install it metamask.io
  * Check balance : https://impartial-ellipse.glitch.me/accountinfo.html
  * Manage invoice(s) : https://impartial-ellipse.glitch.me/invoice
  * Make transfer : https://impartial-ellipse.glitch.me/transfer
+ * Using the Line Messaging API, you can get Ethereum's balance or send money from the Line talk screen.
+ 
+ <img align="left" src="https://camo.qiitausercontent.com/d6ebaf6a8bae3b4555e50340ab233c122a3a86c1/68747470733a2f2f707261676d612d63757272792e636f6d2f77702f77702d636f6e74656e742f75706c6f6164732f323031382f30372f39363038636465383064333161656433623736656632623665363562653965642d312e6a7067" alt="HLD" width="100"/>
+ 
+# usage environment
+Ethereum Node - infura.io
+Application Server - Glitch
+1/ Setting up the Line Messaging API
+Register providers and channels with LINE Developers' Start using Messaging API .
+
+For detailed procedures, refer to the last entry Entry Line Messaging API Flex Message .
+
+2/ Acquire the API KEY of infura.io
+By registering a mail address from the GET STARTED FOR FREE button of infura.io you can get API KEY.
+
+For detailed procedures, please refer to the last entry ERC 223 token shortly to public on the public chain (for busy people) .
+
+3/ Set the Glitch
+Glitch is Paas that Node.js can use. Sign up can also be done with Github's account. 
+After logging in, create a new project from New Project.
+
+I created a project named impartial-ellipse this time. 
 
 Line@
 https://line.me/R/ti/p/%40crb2330m
