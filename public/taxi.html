@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Amis Line Ether Wallet DApp</title>
+<title>Advanced Mobility Infrastructure Solution DApp</title>
 <script src="jquery-3.2.1.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,21 +18,17 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="accountinfo.html" class="w3-bar-item w3-button w3-padding-large">WALLET</a>
-    <a href="transfer.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TRANSFER</a>
-    <a href="invoice.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MANAGE INVOICE</a>
-    <a href="taxi.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TAXI</a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ISSUE</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#video" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEO</a>
+    <a href="#report" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
   </div>
 </div>
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="accountinfo.html" class="w3-bar-item w3-button w3-padding-large">WALLET</a>
-  <a href="transfer.html" class="w3-bar-item w3-button w3-padding-large">TRANSFER</a>
-  <a href="invoice.html" class="w3-bar-item w3-button w3-padding-large">MANAGE INVOICE</a>
-  <a href="taxi.html" class="w3-bar-item w3-button w3-padding-large">TAXI</a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large">ISSUE</a>
+  <a href="#report" class="w3-bar-item w3-button w3-padding-large">MENU</a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
 </div>
 
 <!-- Page content -->
@@ -41,55 +37,136 @@ body {font-family: "Lato", sans-serif}
   <!-- The Demo Section -->
   <div class="w3-grey">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h1 class="w3-center w3-text-black">Amis Line Ether Wallet DApp</h1>
-      <p class="w3-opacity w3-center"><i>A mobile friendly Dapp for shopping with the AMIS ERC20 Token</i></p><br>
+      <h1 class="w3-center w3-text-black">Amis Mobility Chain Demo</h1>
+      <p class="w3-opacity w3-center"><i>Advanced Mobility Infrastructure Solution - AMIS -</i></p><br>
 
-      
-        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
           <div class="w3-container w3-white">
-            <img src="icon.png" width="50px">
+            <img src="images/icon.png" width="200px">
           </div>
         </div>
+        
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            <p><b>Add User</b></p>
+            <p>Name:<span style="display:inline-block; width:5mm;"></span><input id="inputName" type="text" size="14"></input></p>
+            <p>Car Type:<span style="display:inline-block; width:5mm;"></span>
+            <select id="carType">
+                <option></option>
+                <option>Electric Car</option>
+                <option>Regular Car</option>
+                <option>Limo</option>
+                <option>Mini Bus</option>
+          </select></p>
+            <button class="w3-button w3-black w3-margin-bottom addUserButton">Add User</button>
+          </div>
+        </div>
+
+        <!-- <div class="w3-third w3-margin-bottom"> -->
+          <!-- <div class="w3-container w3-white"> -->
+            <!-- <p><b>Request MobCoins</b></p> -->
+            <!-- <p><input type="number"></input></p> -->
+            <!-- <button class="w3-button w3-black w3-margin-bottom requestCoinButton">Request MobCoins</button> -->
+          <!-- </div> -->
+        <!-- </div> -->
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            <p><b>Show User</b></p>
+            <p id="requestedUserBalance">User Balance</p>
+            <p id="requestedUserRep">User Reputation</p>
+            <p id="requestedUserSus">User Sustainability</p>
+            <button class="w3-button w3-black w3-margin-bottom showUserButton">Show User</button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey w3-half">
+          <li class="w3-padding">Start Point <span style="display:inline-block; width:5mm;"></span>
+          <select name="start" id="start">
+            <option value="zurich">Zurich HB</option>
+            <option value="geneva">Geneva Airport</option>
+            <option value="lausanne">Lausanne Gare Centrale</option>
+          </select></li>
+        <li class="w3-padding">End Point <span style="display:inline-block; width:5mm;"></span>
+          <select id="selectedEndPoint" name="end">
+            <!-- <option value="zurich">Zurich</option> -->
+            <option value="bern">Zurich Oerlikon</option>
+            <option value="basel">Zurich Altstetten</option>
+            <option value="stgallen">St. Gallen</option>
+            <option value="wallisellen">Wallisellen</option>
+            <option value="winterthur">Winterthur</option>
+            <option value="yverdon">Yverdon</option>
+          </select></li>
+        <li class="w3-padding">Car <span style="display:inline-block; width:5mm;"></span>
+          <select id="selectedCar" name="car">
+            <option value="zurich">Electric Car</option>
+            <option value="bern">Normal Car</option>
+            <option value="geneva">Limo Car</option>
+            <option value="lausanne">Mini Bus</option>
+          </select></li></ul>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey w3-half">
+        <li class="w3-padding">&nbsp; <span style="display:inline-block; width:5mm;"></span></li>
+        <li class="w3-padding">&nbsp; <span style="display:inline-block; width:5mm;"></span></li>
+        <!-- <li class="w3-padding" style="margin: -2.6px -2.6px">As soon as user gets to car she/he will be asked to rate the overall state of the car. On this basis the previous user will be awarded or punished.<span style="display:inline-block; width:5mm;"></span> -->
+          <li class="w3-padding">Rate previous user <span style="display:inline-block; width:5mm;"></span>
+          <select id="rating" name="end">
+            <!-- <option value="zurich">Zurich</option> -->
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select></li>
+          </li>
+        <!-- <ul style="list-style-type:none; padding-left:1"> -->
+        <!-- <li> -->
+            <!-- <button class="w3-button w3-black w3-margin-bottom rateButton">Rate</button> -->
+        <!-- </li></ul> -->
+      <!-- <ul class="w3-ul w3-border w3-white w3-text-grey w3-half" style="margin:-25px 0"> -->
+        </li></ul>
+        <ul style="list-style-type:none; padding-left:0">
+        <li>
+            <button class="w3-button w3-black w3-margin-bottom requestCarButton">Request Car</button>
+            <span style="display:inline-block; width:195px"></span>
+            <button class="w3-button w3-black w3-margin-bottom driveButton">Drive</button>
+            <span style="display:inline-block; width:0px"></span>
+            <button class="w3-button w3-black w3-margin-bottom rateButton">Rate</button>
+        </li></ul>
+      <br>
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding" id="view">Debugging</li>
+      </ul>
     </div>
   </div>
-  <!--AccountInformation-->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="video">
-    <h2 class="">ACCOUNT INFORMATION </h2>
-    <p class="w3-opacity"><a href="accountinfo.html" onFocus="if(this.blur)this.blur()">Check balance and Account Information</a></p>
-    </div>
 
   <!--Video-->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="video">
-    <h2 class="">TRANSFER ETH </h2>
-    <p class="w3-opacity"><a href="transfer.html" onFocus="if(this.blur)this.blur()">Transfer ETH and/or AMIS</a></p>
+    <h2 class="">Demo Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zGg5Ko9_ryM" frameborder="0" allow="autoplay; encrypted-media"></iframe>
     </div>
 
   <!--Report-->
   <div class="w3-grey" id="report">
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
-      <h2 class="w3-center">MANAGE INVOICE / BILL / REMITTANCE</h2>
-      <p class="w3-opacity"><a href="invoice.html" onFocus="if(this.blur)this.blur()">Manage Invoice / Bills / Remittance</a></p>
-    </div>
-  </div>
-    
-  <!--Taxi-->
-  <div class="w3-grey" id="taxi">
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
-      <h2 class="w3-center">Taxi</h2>
-      <p class="w3-opacity"><a href="taxi.html" onFocus="if(this.blur)this.blur()">Take a ride</a></p>
+      <h2 class="w3-center">Menu</h2>
+      <p class="w3-opacity"><a href="index.html" onFocus="if(this.blur)this.blur()">Back to Amis Line Ether Wallet</a></p>
+      <p class="w3-opacity"><a href="FuturICT-MobChain.pptx" onFocus="if(this.blur)this.blur()">Presentation Download Link</a></p>
+      <p class="w3-opacity"><a href="MobChain_Pitch_Final-1.pptx" onFocus="if(this.blur)this.blur()">Pitch Download Link</a></p>
     </div>
   </div>
 
   <!--About-->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
-    <h2 class="">Issue</h2>
-      <p class="w3-center">Report any issue(s) on our github page: <a href="https://github.com/Ami-Solution/etherbot" onFocus="if(this.blur)this.blur()">HERE</a></p>
+    <h2 class="">About</h2>
+      <p class="w3-justify">This project is under development and we welcome any contributions, just file an issue on our github page: <a href="https://github.com/ami-solution/transportation" target="_blank">w3.css</a></p>
   </div>
 </div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <p class="w3-medium">Powered by <a href="https://glitch.com" target="_blank">https://impartial-ellipse.glitch.me/</a></p>
+  <p class="w3-medium">Template by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
 <script>
@@ -282,18 +359,16 @@ body {font-family: "Lato", sans-serif}
         "stateMutability": "nonpayable",
         "type": "constructor"
     }];
-
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
     if (typeof web3 !== 'undefined') {
         // Use Mist/MetaMask's provider
-        $('#view').text('web3 is installed');
+        $('#view').text('I have web3!!!');
         window.web3 = new Web3(web3.currentProvider);
     } else {
-        var errorMsg = 'web3 is missing :( Please open in Google Chrome Browser and install the Metamask extension.';
+        var errorMsg = 'I doesn\'t have web3 :( Please open in Google Chrome Browser and install the Metamask extension.';
         $('#view').text(errorMsg);
         console.log(errorMsg);
     }
-
     $(window).on('load', function() {
         // create instance of contract object that we use to interface the smart contract
         var contractInstance = web3.eth.contract(contractAbi).at(contractAddress);
@@ -317,7 +392,6 @@ body {font-family: "Lato", sans-serif}
             var user = $('#inputName').val();
             addUser(contractInstance, user, car)
         });
-
         $('.requestCoinButton').on('click', function() {
             requestCoin(contractInstance)
         });
@@ -419,7 +493,6 @@ body {font-family: "Lato", sans-serif}
                 $('#view').text(carCond + "," + addressLender+"," + addressPre);
         });
     }
-
 </script>
 </body>
 </html>
