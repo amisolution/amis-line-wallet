@@ -43,7 +43,7 @@
             <div class="form">
                 <div class="input name" style="margin-top:2rem;">
                     <label>Name</label>
-                    <input type="text" placeholder="Water, Bread, Rice, Orange, Service Provider, etc.">
+                    <input type="text" placeholder="Water, Bread, Rice, Orange, etc.">
                     <div class="message_alert"></div>
                 </div>
                 <div class="input chain">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="input price">
                     <label>Price</label>
-                    <input type="tel" placeholder="0.001 Ether/Amis">
+                    <input type="tel" placeholder="0.001 Ether">
                     <div class="message_alert"></div>
                 </div>
                 <div class="btn_container">
@@ -248,7 +248,7 @@
                      $(".body .main .info-container").append(
                          $("<div>").attr({ "class": "info"})
                              .append($("<div>").attr({ "class": "name" }).text(key.name))
-                             .append($("<div>").attr({ "class": "price" }).text(key.price + ' Ether/Amis'))
+                             .append($("<div>").attr({ "class": "price" }).text(key.price + ' Ether/'))
                              .append($("<div>").attr({ "class": "chain" }).text('Chain : ' + key.chain))
                              .append($("<div>").attr({ "class": "address" }).text('Recipient : ' + key.address))
                      );
@@ -269,7 +269,7 @@
                      $(".body .list .info-container").append(
                          $("<div>").attr({ "class": "info" , "data-id": key.id })
                              .append($("<div>").attr({ "class": "name", "data-id": key.id }).text(key.name))
-                             .append($("<div>").attr({ "class": "price", "data-id": key.id }).text(key.price + ' Ether/Amis'))
+                             .append($("<div>").attr({ "class": "price", "data-id": key.id }).text(key.price + ' Ether'))
                              .append($("<i class='edit mdl-icon-toggle__label material-icons'>edit</i>").attr({"data-id": key.id}))
                              .append($("<i class='delete mdl-icon-toggle__label material-icons'>delete</i>").attr({"data-id": key.id}))
                              .append($("<i class='cancel mdl-icon-toggle__label material-icons'>cancel</i>").attr({"data-id": key.id}).css({"display":"none"}))
@@ -489,7 +489,7 @@
                         || !String($(this).val()).match(/^[0-9a-zA-Z]/)
                         || !(String($(this).val()).slice(0,2)=='0x')
                     ){
-                        $(".add .address .message_alert").text('Please enter a valid Ethereum / Amis address.');
+                        $(".add .address .message_alert").text('Please enter a valid Ethereum address.');
                     }
                     else{
                         $(".add .address .message_alert").empty();

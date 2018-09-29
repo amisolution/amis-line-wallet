@@ -88,7 +88,7 @@ const Ether = function(){
               var privateKey = new Buffer(secret, 'hex')
               var rawTx = {
                   nonce: web3.toHex(txCount),
-                  gasPrice: web3.toHex(web3.toWei('6', 'gwei')),
+                  gasPrice: web3.toHex(web3.toWei('4', 'gwei')),
                   gasLimit: web3.toHex(21000),
                   to: sendTo,
                   value: web3.toHex(web3.toWei(amount, 'ether')),  
