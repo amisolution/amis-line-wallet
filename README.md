@@ -14,7 +14,7 @@ What is Amis LineEtherBot?
 
 
 # Amis LineEtherBot
- Amis LineEtherBot is a simple Mobile Dapp using Line Messaging API. You can inquire the balance, issue invoices and make payment with AMIS ERC20 Token and ETH.
+ Amis LineEtherBot is a simple Mobile Dapp which uses Line Messaging API. You can inquire the balance, issue invoices and make payment with AMIS ERC20 Token and ETH.
  
  * source: https://pragma-curry.com/2018/07/07/221/
  * Works best with Metamask extension: install it metamask.io
