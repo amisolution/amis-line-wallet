@@ -1,9 +1,10 @@
 {
   "name": "etherbot",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node run",
+    "start": "node server",
+    "start-new": "node ./bin/www",
     "build-js": "browserify public/src/app.js -o public/dist/app.js",
     "build-css": "node-sass --include-path scss public/scss/style.scss public/css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
@@ -14,6 +15,6 @@
     "express": "^4.16.3",
     "linebot": "^1.4.1",
     "nedb": "^1.8.0",
-    "web3": "^1.0.0-beta.34"
+    "web3": "^0.20.6"
   }
 }
